@@ -1,9 +1,18 @@
 #!/bin/bash
-# Script 4: Log Analyzer
+# Script 4: Log Analyzer (Mac + Linux)
 
 LOGFILE=$1
 KEYWORD=${2:-error}
 COUNT=0
+
+# If no file given, choose default
+if [ -z "$LOGFILE" ]; then
+ if [ -f "/var/log/syslog" ]; then
+  LOGFILE="/var/log/syslog"
+ else
+  LOGFILE="/var/log/system.log"
+ fi
+fi
 
 if [ ! -f "$LOGFILE" ]; then
  echo "File not found"
@@ -18,7 +27,9 @@ do
  fi
 done < "$LOGFILE"
 
+echo "Using file: $LOGFILE"
 echo "Keyword '$KEYWORD' found $COUNT times"
 
 echo "Last 5 matching lines:"
 grep -i "$KEYWORD" "$LOGFILE" | tail -5
+
