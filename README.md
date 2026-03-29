@@ -1,64 +1,129 @@
-# oss-audit-24BCE10779
 # Open Source Audit — Git
 
 ## Student Details
 Name: Vedant Mishra  
 Registration Number: 24BCE10779  
-
-## Project Overview
-This project is based on analysis of Git, which is a distributed version control system. It includes study of its origin, license, ecosystem and comparison with proprietary software.  
-
-Also project contains 5 shell scripts which shows basic Linux and scripting understanding.
+Course: Open Source Software  
 
 ---
 
-## Scripts Included
+## Project Description
+This project is based on study and analysis of Git, which is a distributed version control system. The aim of this project was to understand how open source software works in real world and how it is different from proprietary software.
 
-### 1. System Identity Report
-This script displays system information like kernel version, user name, uptime, date and OS details.
+In this project, I have studied the origin of Git, why it was created, its license (GPL), and its importance in modern software development. I also explored how Git works in Linux environment and how it is used by developers for managing code.
 
-Run command:
+Along with theory, I have also created 5 shell scripts to demonstrate basic Linux commands and automation. These scripts helped me understand practical usage of open source tools.
+
+---
+
+## Objectives
+- To understand concept of open source software  
+- To study Git and its working  
+- To learn about software licenses like GPL  
+- To explore Linux environment  
+- To implement shell scripting  
+
+---
+
+## Software Used
+- Git  
+- Linux (Ubuntu / Kali / macOS terminal for testing)  
+- Bash Shell  
+
+---
+
+## Project Structure
+
+oss-audit-24BCE10779/
+│
+├── script1.sh
+├── script2.sh
+├── script3.sh
+├── script4.sh
+├── script5.sh
+└── README.md
+
+---
+
+## Shell Scripts Description
+
+### Script 1 — System Identity Report
+This script displays basic system details like kernel version, user name, uptime, date and OS distribution.  
+It uses variables and command substitution.
+
+Run:
 bash script1.sh
 
 ---
 
-### 2. FOSS Package Inspector
-This script checks whether Git is installed or not and shows version details.
+### Script 2 — FOSS Package Inspector
+This script checks whether Git is installed or not in the system.  
+It also shows version and gives small description using case statement.
 
-Run command:
+Run:
 bash script2.sh
 
 ---
 
-### 3. Disk and Permission Auditor
-This script checks directory size and permissions of important system folders.
+### Script 3 — Disk and Permission Auditor
+This script checks important directories and displays their size and permissions.  
+It uses loop, condition statements and commands like ls, du, awk.
 
-Run command:
+Run:
 bash script3.sh
 
 ---
 
-### 4. Log File Analyzer
-This script reads a log file and counts how many times a keyword appears.
+### Script 4 — Log File Analyzer
+This script reads a log file and counts how many times a keyword appears.  
+It also prints last 5 matching lines.
 
-Run command:
+Run:
 bash script4.sh /var/log/syslog error
+
+(Note: On macOS use /var/log/system.log)
 
 ---
 
-### 5. Manifesto Generator
-This script takes user input and generates a small open source manifesto.
+### Script 5 — Open Source Manifesto Generator
+This script asks user some questions and generates a small manifesto text file.  
+It demonstrates user input and file handling.
 
-Run command:
+Run:
 bash script5.sh
 
 ---
 
-## Requirements
-- Linux system (Ubuntu / Kali)
-- Bash shell
+## How to Run the Project
+
+Step 1: Open terminal and go to project folder  
+cd oss-audit-24BCE10779  
+
+Step 2: Give permission to scripts  
+chmod +x script1.sh script2.sh script3.sh script4.sh script5.sh  
+
+Step 3: Run scripts one by one  
+./script1.sh  
+./script2.sh  
+./script3.sh  
+./script4.sh /var/log/syslog error  
+./script5.sh  
+
+---
+
+## Learning Outcome
+Through this project, I understood how Git works and why it is important in software development. I also learned about open source philosophy and licenses.
+
+Shell scripting part helped me to learn basic Linux commands and automation. This project improved both my theoretical and practical knowledge.
 
 ---
 
 ## Conclusion
-This project helped me to understand Git and importance of open source software. Also learned basic shell scripting and Linux commands.
+Git is a very powerful tool and it is widely used in industry. Open source software like Git gives freedom to users and developers to modify and share software.
+
+Overall, this project was helpful in understanding real world use of open source systems and Linux environment.
+
+---
+
+## Note
+Some scripts were tested on macOS, so slight changes were made for compatibility. But originally scripts are designed for Linux systems.
