@@ -1,9 +1,11 @@
 #!/bin/bash
-# Script 2: Package Inspector
+# Script 2: Package Inspector (Mac + Linux compatible)
 
 PACKAGE="git"
 
-if dpkg -l | grep -q $PACKAGE; then
+# Check if git exists
+if command -v git &> /dev/null
+then
  echo "$PACKAGE is installed"
  git --version
 else
